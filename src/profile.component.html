@@ -1,0 +1,19 @@
+<!-- profile.component.html -->
+<div class="profile">
+  <h2>Profile</h2>
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="currentUser.name" />
+  </label>
+  <label>
+    Nickname:
+    <input type="text" [(ngModel)]="currentUser.nickname" />
+  </label>
+  <label>
+    Email:
+    <input type="text" [(ngModel)]="currentUser.email" />
+  </label>
+  <h3>{{ currentUser.name }}</h3>
+  <p>{{ currentUser.nickname }}</p>
+  <p>{{ currentUser.email }}</p>
+</div>

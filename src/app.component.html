@@ -1,0 +1,17 @@
+<!-- app.component.html -->
+<div id="app">
+  <div id="navigation">
+    <h1>Javascript Framework Blog</h1>
+  </div>
+  <app-profile></app-profile>
+  <app-new-post></app-new-post>
+  <div class="posts">
+    <h2>Posts</h2>
+    <app-post
+      *ngFor="let post of posts"
+      [post]="post"
+      (displayMessageEvent)="displayMessage($event)"
+    ></app-post>
+  </div>
+  <div id="message" class="message">{{ message }}</div>
+</div>

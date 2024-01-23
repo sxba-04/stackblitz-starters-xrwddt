@@ -1,0 +1,27 @@
+/* profile.component.css */
+.profile {
+  border: 1px solid #ccc;
+  background-color: hsl(72, 21%, 86%);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  word-wrap: break-word;
+}
+
+h2,
+h3 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

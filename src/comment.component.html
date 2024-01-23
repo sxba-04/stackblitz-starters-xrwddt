@@ -1,0 +1,29 @@
+<!-- comment.component.html -->
+<div class="comment">
+  <p>{{ comment.authorNickname }}: {{ comment.content }}</p>
+  <button class="like-comment" (click)="rateComment('like')">
+    Like {{ comment.likes }}
+  </button>
+  <button class="dislike-comment" (click)="rateComment('dislike')">
+    Dislike {{ comment.dislikes }}
+  </button>
+  <button class="delete-comment" (click)="deleteComment()">Delete</button>
+  <p class="author-email" style="display:none;">{{ comment.authorEmail }}</p>
+  <p class="timestamp">{{ comment.timestamp | date: 'medium' }}</p>
+  <button class="comment" (click)="addReply('')">Reply</button>
+  <div class="comments">
+    <h3>Replies</h3>
+    <app-comment
+      *ngFor="let reply of comment.replies"
+      [comment]="reply"
+      (displayMessageEvent)="displayMessageEvent.emit($event)"
+    ></app-comment>
+  </div>
+  <button class="like-comment" (click)="rateComment('like')">
+    Like {{ comment.likes }}
+  </button>
+  <button class="dislike-comment" (click)="rateComment('dislike')">
+    Dislike {{ comment.dislikes }}
+  </button>
+  <button class="delete-comment" (click)="deleteComment()">Delete</button>
+</div>

@@ -1,0 +1,15 @@
+<!-- new-post.component.html -->
+<div class="new-post">
+  <h2>New Post</h2>
+  <form (submit)="submitPost()">
+    <label>
+      Title:
+      <input type="text" [(ngModel)]="title" />
+    </label>
+    <label>
+      Content:
+      <textarea [(ngModel)]="content"></textarea>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+</div>
